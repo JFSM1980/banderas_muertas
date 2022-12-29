@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banderas de países</title>
+</head>
+<body>
+  <h1>Banderas de países (muertas)</h1>
+  <p>Bienvenido a nuestra aplicación de banderas de países que o ya no existen o son versiones antiguas de las actuales. A continuación encontrarás una serie de imágenes de banderas de diferentes países. ¡Inténtalo y demuestra cuánto sabes sobre banderas!</p>
+
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Flag_of_the_West_Indies_Federation_%281958%E2%80%931962%29.svg/320px-Flag_of_the_West_Indies_Federation_%281958%E2%80%931962%29.svg.png" id="flagImage">
+
+  <p>¿Qué país corresponde a esta bandera?</p>
+  <input type="radio" name="question1" value="Estados Unidos"> Trinidad y Tobago<br>
+  <input type="radio" name="question1" value="Reino de Camboya"> Reino de Camboya<br>
+  <input type="radio" name="question1" value="Indias Occidentales"> Indias Occidentales<br>
+  <input type="radio" name="question1" value="República Dominicana"> República Dominicana<br>
+
+  <button onclick="checkAnswer(1)">Comprobar respuesta</button>
+
+
+
+  <p id="result"></p>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Hawaii.svg/320px-Flag_of_Hawaii.svg.png" id="flagImage">
+
+  <p>¿Qué país corresponde a esta bandera?</p>
+  
+  <input type="radio" name="question2" value="Samoa"> Samoa<br>
+  <input type="radio" name="question2" value="Reino de Hawai"> Reino de Hawai<br>
+  <input type="radio" name="question2" value="Tuvalu"> Tuvalu<br>
+  <input type="radio" name="question2" value="Fiji"> Fiji<br>
+
+  <button onclick="checkAnswer(2)">Comprobar respuesta</button>
+
+  <p id="result2"></p>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Reichskolonialflagge.svg/320px-Reichskolonialflagge.svg.png" id="flagImage">
+
+  <p>¿Qué país corresponde a esta bandera?</p>
+  <input type="radio" name="question3" value="Prusia"> Prusia<br>
+  <input type="radio" name="question3" value="Imperio Aleman"> Imperio Aleman<br>
+  <input type="radio" name="question3" value="Austria">Austria<br>
+  <input type="radio" name="question3" value="Guam"> Guam<br>
+
+  <button onclick="checkAnswer(3)">Comprobar respuesta</button>
+
+  <p id="result3"></p>
+
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Swaziland_1894.svg/320px-Flag_of_Swaziland_1894.svg.png" id="flagImage">
+
+
+  <p>¿Qué país corresponde a esta bandera?</p>
+  <input type="radio" name="question4" value="Nigeria"> Nigeria<br>
+  <input type="radio" name="question4" value="Guinea"> Guinea<br>
+  <input type="radio" name="question4" value="Madagascar"> Madagascar<br>
+  <input type="radio" name="question4" value="Suazilandia"> Suazilandia<br>
+
+  <button onclick="checkAnswer(4)">Comprobar respuesta</button>
+
+  <p id="result4"></p>
+
+  <script>
+function checkAnswer(questionNumber) {
+  if (questionNumber === 1) {
+    // obtener el valor de la respuesta seleccionada
+    var answer = document.querySelector('input[name="question1"]:checked').value;
+
+    // comprobar si la respuesta es correcta
+    if (answer === "Indias Occidentales") {
+      document.getElementById("result").innerHTML = "¡Respuesta correcta!";
+    } else {
+      document.getElementById("result").innerHTML = "Lo siento, respuesta incorrecta.";
+    }
+  } else if (questionNumber === 2) {
+    // obtener el valor de la respuesta seleccionada
+    var answer = document.querySelector('input[name="question2"]:checked').value;
+
+    // comprobar si la respuesta es correcta
+    if (answer === "Reino de Hawai") {
+      document.getElementById("result2").innerHTML = "¡Respuesta correcta!";
+    } else {
+      document.getElementById("result2").innerHTML = "Lo siento, respuesta incorrecta.";
+    }
+  }
+
+  else if (questionNumber === 3) {
+    // obtener el valor de la respuesta seleccionada
+    var answer = document.querySelector('input[name="question3"]:checked').value;
+
+    // comprobar si la respuesta es correcta
+    if (answer === "Imperio Aleman") {
+      document.getElementById("result3").innerHTML = "¡Respuesta correcta!";
+    } else {
+      document.getElementById("result3").innerHTML = "Lo siento, respuesta incorrecta.";
+    }
+  }
+
+  else if (questionNumber === 4) {
+    // obtener el valor de la respuesta seleccionada
+    var answer = document.querySelector('input[name="question4"]:checked').value;
+
+    // comprobar si la respuesta es correcta
+    if (answer === "Suazilandia") {
+      document.getElementById("result4").innerHTML = "¡Respuesta correcta!";
+    } else {
+      document.getElementById("result4").innerHTML = "Lo siento, respuesta incorrecta.";
+    }
+  }
+
+
+}
+
+
+  </script>
+
+  
+</body>
+</html>
